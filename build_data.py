@@ -176,6 +176,11 @@ def main():
             rank = r.get("rank", "")
             contestant = r.get("contestant", "")
             total = r.get("total", "")
+            solved = r.get("solved", "")
+            
+            # Use solved as total if total is not available (old format)
+            if not total and solved:
+                total = solved
             
             handle = contestant.split(" - ")[0] if " - " in contestant else contestant
             
