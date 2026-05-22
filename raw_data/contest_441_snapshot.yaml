@@ -1,0 +1,19 @@
+url: https://judge.hkoi.org/contest/441/results
+name: 2025 EGOI Team Formation Test
+date: 2025-05-03 14:05:00 - 2025-05-03 18:05:00
+duration: 4 h
+tasks:
+  - Linear Zoo
+  - Sliding Crates
+  - Highway Reversal
+  - Grand School Award
+rankings_top20:
+  - rank: 1, contestant: dgs161 - Ching Helen, t25g1: "100 / 0:25", t25g2: "66", t25g3: "73", t25g4: "58", total: "297"
+  - rank: 2, contestant: ywgs265 - 馬陸, t25g1: "100 / 3:05", t25g2: "51", t25g3: "73", t25g4: "21", total: "245"
+  - rank: 3, contestant: ywgs283 - Saka, t25g1: "100 / 3:45", t25g2: "40", t25g3: null, t25g4: "0", total: "140"
+  - rank: 4, contestant: ywgs197 - Man Cho Yan, t25g1: "75", t25g2: "32", t25g3: "32", t25g4: "0", total: "139"
+  - rank: 5, contestant: ywgs191 - Law Yi Sheung, t25g1: "75", t25g2: "40", t25g3: "22", t25g4: "0", total: "137"
+  - rank: 6, contestant: human - human, t25g1: "51", t25g2: "38", t25g3: "0", t25g4: "21", total: "110"
+  - rank: 7, contestant: ylmass_s20200092 - Mak Long Sze, t25g1: "75", t25g2: "32", t25g3: null, t25g4: "0", total: "107"
+  - rank: 8, contestant: twg-200042 - Hui Ka Wai, t25g1: "37", t25g2: "21", t25g3: null, t25g4: "0", total: "58"
+  - rank: 9, contestant: dgs222007 - 2,2-dimethylpropane, t25g1: "19", t25g2: "21", t25g3: null, t25g4: null, total: "40"

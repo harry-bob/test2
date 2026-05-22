@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/470/results
+name: 2026 Constructive Algos & Special Tasks Mini Comp A
+date: 2026-02-28 15:45:00 - 2026-02-28 16:50:00
+duration: 1 h 5 m
+tasks:
+  - Create a Maze
+  - Square or Rectangle?
+rankings_top20:
+  - rank: 1, contestant: bertoPEn, m26a1: "12.5", m26a2: "50 / 1:01", total: "62.5"
+  - rank: 1, contestant: all task is trivial, m26a1: "12.5", m26a2: "50 / 0:50", total: "62.5"
+  - rank: 3, contestant: hi, m26a1: "12.5", m26a2: "37.559", total: "50.059"
+  - rank: 4, contestant: HopeIess Society of OI, m26a1: "12.5", m26a2: "35.794", total: "48.295"
+  - rank: 5, contestant: trivialtask, m26a1: "0", m26a2: "38.441", total: "38.442"
+  - rank: 6, contestant: Ra, m26a1: "12.5", m26a2: "16", total: "28.5"
+  - rank: 6, contestant: twg-210110's team, m26a1: "12.5", m26a2: "16", total: "28.5"
+  - rank: 8, contestant: alexsun's team, m26a1: null, m26a2: "25.5", total: "25.5"
+  - rank: 9, contestant: ok, m26a1: "12.5", m26a2: "9", total: "21.5"
+  - rank: 10, contestant: donuts, m26a1: "12.5", m26a2: "7", total: "19.5"
+  - rank: 10, contestant: s201701122's team, m26a1: "12.5", m26a2: "7", total: "19.5"
+  - rank: 10, contestant: SOLIS, m26a1: "12.5", m26a2: "7", total: "19.5"
+  - rank: 10, contestant: wy_24084's team, m26a1: "12.5", m26a2: "7", total: "19.5"
+  - rank: 10, contestant: "1", m26a1: "12.5", m26a2: "7", total: "19.5"
+  - rank: 10, contestant: "?", m26a1: "12.5", m26a2: "7", total: "19.5"
+  - rank: 16, contestant: 打oi利大於弊(反), m26a1: null, m26a2: "16", total: "16"
+  - rank: 16, contestant: 3lo's team, m26a1: null, m26a2: "16", total: "16"
+  - rank: 18, contestant: team, m26a1: "12.5", m26a2: "0", total: "12.5"
+  - rank: 19, contestant: Whaphark's team, m26a1: "0", m26a2: "7", total: "7"
+  - rank: 19, contestant: PollockScale, m26a1: null, m26a2: "7", total: "7"
+  - rank: 19, contestant: using namespace idk, m26a1: null, m26a2: "7", total: "7"
+  - rank: 19, contestant: 我唔知啊, m26a1: null, m26a2: "7", total: "7"

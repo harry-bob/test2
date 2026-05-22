@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/442/results
+name: 2025 Team Formation Test
+date: 2025-05-10 14:00:00 - 2025-05-10 19:00:00
+duration: 5 h
+tasks:
+  - Moving Marvellous Marbles
+  - Sage's Shopping Spree
+  - Peaceful Pirate Pairs
+  - Robo's Recursive Realm
+rankings_top20:
+  - rank: 1, contestant: twg-210083 - Lo Ting Wai, t251: "8", t252: "100 / 1:17", t253: "100 / 2:19", t254: "81.316", total: "289.316"
+  - rank: 2, contestant: bedrockfake - jeekee, t251: "8", t252: "100 / 3:13", t253: "100 / 1:24", t254: "80.82", total: "288.82"
+  - rank: 3, contestant: s20146 - onbert, t251: "8", t252: "100 / 4:39", t253: "100 / 1:39", t254: "70.95", total: "278.95"
+  - rank: 4, contestant: firewater - 1+1=2, t251: "8", t252: "100 / 0:57", t253: "76", t254: "78.249", total: "262.249"
+  - rank: 5, contestant: WYK23F32 - hopeIess, t251: "37", t252: "100 / 0:38", t253: "100 / 1:33", t254: "18.236", total: "255.236"
+  - rank: 6, contestant: __jk__ - in a game of up to six trials..., t251: "37", t252: "100 / 2:52", t253: "100 / 0:47", t254: "17.975", total: "254.975"
+  - rank: 7, contestant: s20192 - hopefuI, t251: "37", t252: "84", t253: "100 / 1:57", t254: "15.001", total: "236.001"
+  - rank: 8, contestant: dbscarsonho - the wedding bells are chiming, t251: "3", t252: "84", t253: "100 / 2:37", t254: "46.597", total: "233.597"
+  - rank: 9, contestant: yellowtoad - yellowtoad, t251: "37", t252: "84", t253: "76", t254: "23", total: "220"
+  - rank: 10, contestant: s20251 - I think I did not 2con, t251: "18", t252: "100 / 1:55", t253: "100 / 0:47", t254: null, total: "218"
+  - rank: 11, contestant: dbsculver0412 - grinding..., t251: "8", t252: "100 / 0:34", t253: "100 / 3:09", t254: null, total: "208"
+  - rank: 12, contestant: s19198 - bye, t251: null, t252: "84", t253: "100 / 3:56", t254: "23", total: "207"
+  - rank: 13, contestant: sms27098 - hope=7, t251: null, t252: "65", t253: "100 / 2:13", t254: "22.381", total: "187.381"
+  - rank: 14, contestant: rsu - the ominous bells were tolling, t251: "37", t252: "57", t253: "65", t254: "23", total: "182"
+  - rank: 15, contestant: shayeung - Angus_Yeung, t251: "3", t252: "84", t253: "65", t254: "21.49", total: "173.49"
+  - rank: 16, contestant: WYK19L08 - Ho Chun Ho, t251: "8", t252: "84", t253: "76", t254: null, total: "168"
+  - rank: 17, contestant: WYK22L19 - hope=0, t251: "8", t252: "57", t253: "76", t254: "17.975", total: "158.975"
+  - rank: 18, contestant: jltan - Tan Jian Lang, t251: "8", t252: "57", t253: "55", t254: "23", total: "143"
+  - rank: 19, contestant: WYK19F34 - Bye, t251: "8", t252: "65", t253: "44", t254: "23", total: "140"
+  - rank: 20, contestant: wy_24215 - animal migration, t251: "8", t252: "67", t253: "65", t254: null, total: "140"

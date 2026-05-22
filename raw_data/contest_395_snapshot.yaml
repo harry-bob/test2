@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/395/results
+name: 2024 Mini Competition III
+date: 2024-05-11 14:30:00 - 2024-05-11 17:30:00
+duration: 3 h
+tasks:
+  - Hyper Pawn
+  - Travelling Merchant
+  - Mind Reading
+  - Colouriguessr
+rankings_top20:
+  - rank: 1, contestant: WongChun1234 - NO MORE IOI, m2431: "100 / 0:33", m2432: "40", m2433: "56.91", m2434: "100 / 1:01", total: "296.91"
+  - rank: 2, contestant: happypotato - bruh open, m2431: "100 / 0:32", m2432: "40", m2433: "56.455", m2434: "100 / 1:28", total: "296.455"
+  - rank: 3, contestant: acgn - binary search on judge is good, m2431: "100 / 2:17", m2432: null, m2433: "43.302", m2434: "73", total: "216.302"
+  - rank: 4, contestant: __jk__ - in a game of up to six trials..., m2431: "100 / 1:18", m2432: "36", m2433: "37.686", m2434: "23.828", total: "197.514"
+  - rank: 5, contestant: s20251 - I think I did not 2con, m2431: "100 / 1:45", m2432: "36", m2433: "37.532", m2434: null, total: "173.532"
+  - rank: 6, contestant: firewater - 1+1=2, m2431: "43", m2432: null, m2433: "37.886", m2434: "63", total: "143.886"
+  - rank: 7, contestant: s20192 - hopefuI, m2431: "43", m2432: "20", m2433: "25", m2434: "55", total: "143"
+  - rank: 8, contestant: s19198 - bye, m2431: "43", m2432: "7", m2433: "37.845", m2434: "47.821", total: "135.666"
+  - rank: 9, contestant: snowysecret - grim, m2431: "43", m2432: "7", m2433: "51.714", m2434: "24.922", total: "126.636"
+  - rank: 10, contestant: dbsjerryliuhkg - afo, m2431: "43", m2432: "7", m2433: "49.625", m2434: "12.471", total: "112.096"
+  - rank: 11, contestant: WYK19L08 - Ho Chun Ho, m2431: "100 / 2:18", m2432: null, m2433: null, m2434: "5.058", total: "105.058"
+  - rank: 12, contestant: ywgs121 - ywgs121, m2431: "0", m2432: "36", m2433: "46.323", m2434: "12.68", total: "95.003"
+  - rank: 13, contestant: twg-210083 - Lo Ting Wai, m2431: "43", m2432: "7", m2433: "25", m2434: "20", total: "95"
+  - rank: 14, contestant: bedrockfake - jeekee, m2431: "43", m2432: "20", m2433: "7", m2434: "19.942", total: "89.942"
+  - rank: 15, contestant: qc15270 - FU SZE HO EDISON, m2431: "43", m2432: null, m2433: "25", m2434: "20", total: "88"
+  - rank: 15, contestant: sms27098 - hope=7, m2431: "6", m2432: null, m2433: "7", m2434: "75", total: "88"
+  - rank: 17, contestant: s20297 - maybe possible?, m2431: "43", m2432: null, m2433: "39.229", m2434: "5.519", total: "87.748"
+  - rank: 18, contestant: s20146 - onbert, m2431: "43", m2432: null, m2433: "40.485", m2434: "0", total: "83.485"
+  - rank: 19, contestant: chkwok2 - Alexabcde, m2431: "0", m2432: null, m2433: "45.636", m2434: "21.772", total: "67.408"
+  - rank: 20, contestant: shayeung - Angus_Yeung, m2431: "0", m2432: "20", m2433: "25", m2434: "19.942", total: "64.942"

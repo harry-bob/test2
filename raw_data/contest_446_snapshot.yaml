@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/446/results
+name: 2025 Training Camp / NOI
+date: 2025-06-29 09:30:00 - 2025-06-29 14:30:00
+duration: 5 h
+tasks:
+  - Time Travelling
+  - Rainbow Cards
+  - Bar Chart
+  - Strided Clique MSF
+rankings_top20:
+  - rank: 1, contestant: WYK23F32 - hopeIess, m2541: "100 / 1:28", m2542: "100 / 4:29", m2543: "60", m2544: "45", total: "305"
+  - rank: 2, contestant: s20192 - hopefuI, m2541: "80", m2542: "35", m2543: "84", m2544: "100 / 4:58", total: "299"
+  - rank: 3, contestant: WYK22L19 - hope=0, m2541: "100 / 1:27", m2542: "35", m2543: "60", m2544: "70", total: "265"
+  - rank: 4, contestant: ccsc_fangzecheng - Damn2, m2541: "60", m2542: "35", m2543: "64", m2544: "100 / 4:05", total: "259"
+  - rank: 5, contestant: bedrockfake - jeekee, m2541: "30", m2542: "60", m2543: "96", m2544: "70", total: "256"
+  - rank: 6, contestant: s20146 - onbert, m2541: "55", m2542: "60", m2543: "68", m2544: "70", total: "253"
+  - rank: 7, contestant: wy_24215 - animal migration, m2541: "80", m2542: "60", m2543: "40", m2544: "70", total: "250"
+  - rank: 8, contestant: twg-210083 - Lo Ting Wai, m2541: "80", m2542: "60", m2543: "60", m2544: "45", total: "245"
+  - rank: 9, contestant: firewater - 1+1=2, m2541: null, m2542: "95", m2543: "40", m2544: "70", total: "205"
+  - rank: 10, contestant: shayeung - Angus_Yeung, m2541: "10", m2542: "60", m2543: "84", m2544: "45", total: "199"
+  - rank: 11, contestant: yellowtoad - yellowtoad, m2541: "0", m2542: "35", m2543: "92", m2544: "70", total: "197"
+  - rank: 12, contestant: dbsMarco - Hui Pak Yu, m2541: "30", m2542: "60", m2543: "60", m2544: "45", total: "195"
+  - rank: 13, contestant: s20251 - I think I did not 2con, m2541: "100 / 0:48", m2542: null, m2543: "88", m2544: null, total: "188"
+  - rank: 14, contestant: dbscarsonho - the wedding bells are chiming, m2541: "20", m2542: "60", m2543: "60", m2544: "45", total: "185"
+  - rank: 15, contestant: WYK19L08 - Ho Chun Ho, m2541: "100 / 4:25", m2542: "0", m2543: "80", m2544: null, total: "180"
+  - rank: 16, contestant: dbsculver0412 - grinding..., m2541: "10", m2542: "60", m2543: "60", m2544: "35", total: "165"
+  - rank: 17, contestant: __jk__ - in a game of up to six trials..., m2541: null, m2542: "0", m2543: "80", m2544: "80", total: "160"
+  - rank: 18, contestant: jltan - Tan Jian Lang, m2541: "50", m2542: "35", m2543: "32", m2544: "35", total: "152"
+  - rank: 18, contestant: sms27098 - hope=7, m2541: "50", m2542: "35", m2543: "32", m2544: "35", total: "152"
+  - rank: 20, contestant: dbscarychan - WOW!, m2541: "20", m2542: "35", m2543: "60", m2544: "35", total: "150"

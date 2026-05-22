@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/436/results
+name: 2025 Mini Competition III
+date: 2025-04-12 14:52:00 - 2025-04-12 17:52:00
+duration: 3 h
+tasks:
+  - Fuzzy Sorting
+  - Coprime Cycle
+  - Hidden Boxes
+  - Inversion Minimization
+rankings_top20:
+  - rank: 1, contestant: s20251 - I think I did not 2con, m2531: "100 / 1:49", m2532: null, m2533: "77.5", m2534: "100 / 2:14", total: "277.5"
+  - rank: 2, contestant: WYK23F32 - hopeIess, m2531: "100 / 1:26", m2532: "42.537", m2533: "61.282", m2534: "70", total: "273.819"
+  - rank: 3, contestant: __jk__ - in a game of up to six trials..., m2531: "100 / 0:49", m2532: "43.653", m2533: "10", m2534: "100 / 1:44", total: "253.653"
+  - rank: 4, contestant: dbsculver0412 - grinding..., m2531: "52", m2532: null, m2533: "88", m2534: "100 / 1:42", total: "240"
+  - rank: 5, contestant: s20146 - onbert, m2531: "100 / 1:30", m2532: "10", m2533: "67.552", m2534: "52", total: "229.552"
+  - rank: 6, contestant: yellowtoad - yellowtoad, m2531: "37", m2532: "25.607", m2533: "92.5", m2534: "70", total: "225.107"
+  - rank: 7, contestant: firewater - 1+1=2, m2531: "100 / 3:49", m2532: "33.979", m2533: "20", m2534: "52", total: "205.979"
+  - rank: 8, contestant: s20192 - hopefuI, m2531: "24", m2532: "45.968", m2533: "50.621", m2534: "70", total: "190.589"
+  - rank: 9, contestant: dbscarsonho - the wedding bells are chiming, m2531: "52", m2532: null, m2533: "60.151", m2534: "70", total: "182.151"
+  - rank: 10, contestant: twg-210083 - Lo Ting Wai, m2531: "52", m2532: "22.966", m2533: "62.745", m2534: "27", total: "164.711"
+  - rank: 11, contestant: dbsMarco - Hui Pak Yu, m2531: "52", m2532: "22.734", m2533: "58.867", m2534: "27", total: "160.601"
+  - rank: 12, contestant: wy_24215 - animal migration, m2531: "52", m2532: "22.733", m2533: "57.62", m2534: "27", total: "159.353"
+  - rank: 13, contestant: WYK22L19 - hope=0, m2531: "52", m2532: "32.994", m2533: "10", m2534: "27", total: "121.994"
+  - rank: 14, contestant: dbsptl - Lok Chi Sum, m2531: "24", m2532: "49.021", m2533: "20", m2534: "27", total: "120.021"
+  - rank: 15, contestant: rsu - the ominous bells were tolling, m2531: "24", m2532: "10", m2533: "57.055", m2534: "27", total: "118.055"
+  - rank: 16, contestant: dbsgc9987 - Don't Be lazy (restart coding), m2531: "52", m2532: "10", m2533: "20", m2534: "27", total: "109"
+  - rank: 17, contestant: WYK23F31 - HarryBOB, m2531: "24", m2532: "15.487", m2533: "35.438", m2534: "27", total: "101.925"
+  - rank: 18, contestant: dbscarychan - WOW!, m2531: "24", m2532: "40.611", m2533: "10", m2534: "27", total: "101.611"
+  - rank: 19, contestant: no-op - no-op, m2531: "24", m2532: "10", m2533: "10", m2534: "52", total: "96"
+  - rank: 20, contestant: dgs161 - Ching Helen, m2531: "24", m2532: "43.548", m2533: "0", m2534: "27", total: "94.548"

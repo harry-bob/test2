@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/433/results
+name: 2025 Mini Competition I
+date: 2025-03-01 14:10:00 - 2025-03-01 17:10:00
+duration: 3 h
+tasks:
+  - Move Pads III
+  - Dishwashing
+  - Lucky Draw
+  - Gerrymandering II
+rankings_top20:
+  - rank: 1, contestant: firewater - 1+1=2, m2511: "100 / 1:33", m2512: "11", m2513: "100", m2514: "100 / 2:23", total: "311"
+  - rank: 2, contestant: twg-210083 - Lo Ting Wai, m2511: "92.2", m2512: "11", m2513: "100 / 1:15", m2514: "100 / 1:55", total: "303.2"
+  - rank: 3, contestant: s20251 - I think I did not 2con, m2511: "100 / 2:38", m2512: null, m2513: "100 / 0:59", m2514: "100 / 2:01", total: "300"
+  - rank: 4, contestant: WYK23F32 - hopeIess, m2511: "92.2", m2512: null, m2513: "100", m2514: "78", total: "270.2"
+  - rank: 5, contestant: sms27098 - hope=7, m2511: "92.2", m2512: null, m2513: "11", m2514: "100 / 2:57", total: "203.2"
+  - rank: 6, contestant: yellowtoad - yellowtoad, m2511: "92.2", m2512: "0", m2513: "100", m2514: "0", total: "192.2"
+  - rank: 6, contestant: s20146 - onbert, m2511: "92.2", m2512: "0", m2513: "100 / 2:50", m2514: null, total: "192.2"
+  - rank: 8, contestant: __jk__ - in a game of up to six trials..., m2511: "31.2", m2512: "0", m2513: "100 / 1:15", m2514: "51", total: "182.2"
+  - rank: 8, contestant: dbscarsonho - the wedding bells are chiming, m2511: "92.2", m2512: "0", m2513: "62", m2514: "28", total: "182.2"
+  - rank: 10, contestant: wy_24215 - animal migration, m2511: "49.6", m2512: "11", m2513: "100", m2514: "11", total: "171.6"
+  - rank: 11, contestant: WYK22L19 - hope=0, m2511: "34", m2512: "26", m2513: "100", m2514: "11", total: "171"
+  - rank: 12, contestant: cyjpang - EL PRIMO, m2511: "31.2", m2512: "11", m2513: "100", m2514: "11", total: "153.2"
+  - rank: 13, contestant: s202110288 - Ho Man Kit, m2511: "16", m2512: "11", m2513: "100", m2514: "11", total: "138"
+  - rank: 14, contestant: pepper1208 - just do it later, m2511: "92.2", m2512: "0", m2513: "25", m2514: "11", total: "128.2"
+  - rank: 15, contestant: yxcui - bye oi, m2511: "16", m2512: "11", m2513: "100", m2514: null, total: "127"
+  - rank: 16, contestant: clcheung - I(mpossible)OI, m2511: "60.4", m2512: "0", m2513: "43", m2514: "11", total: "114.4"
+  - rank: 17, contestant: s21433 - i am phacking useless, m2511: "92.2", m2512: null, m2513: null, m2514: "11", total: "103.2"
+  - rank: 18, contestant: WYK23F31 - HarryBOB, m2511: "44.4", m2512: "22", m2513: "25", m2514: "11", total: "102.4"
+  - rank: 19, contestant: s20192 - hopefuI, m2511: "54", m2512: "0", m2513: "48", m2514: null, total: "102"
+  - rank: 20, contestant: lw200016 - Tovi, m2511: "72.4", m2512: null, m2513: "25", m2514: null, total: "97.4"

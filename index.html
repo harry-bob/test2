@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKOI Contest Stats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 30px 0;
+            border-bottom: 3px solid #4ecdc4;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #4ecdc4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #a0aec0;
+            margin-top: 5px;
+        }
+        
+        .disclaimer {
+            text-align: center;
+            color: #f6e05e;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2d3748;
+        }
+        
+        .tab {
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #a0aec0;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .tab:hover {
+            color: #4ecdc4;
+            background: rgba(78, 205, 196, 0.1);
+        }
+        
+        .tab.active {
+            color: #4ecdc4;
+            border-bottom-color: #4ecdc4;
+            background: rgba(78, 205, 196, 0.05);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .search-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .search-box input {
+            width: 300px;
+            padding: 12px 20px;
+            border: 2px solid #2d3748;
+            border-radius: 25px;
+            background: #161b22;
+            color: #e6edf3;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box input:focus {
+            border-color: #4ecdc4;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #161b22 0%, #1a2332 100%);
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .leaderboard {
+            background: #161b22;
+            border-radius: 12px;
+            border: 1px solid #2d3748;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .leaderboard-header {
+            background: linear-gradient(135deg, #1a2332 0%, #16213e 100%);
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4ecdc4;
+            border-bottom: 2px solid #2d3748;
+        }
+        
+        .leaderboard table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .leaderboard th {
+            background: #1a2332;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #a0aec0;
+            border-bottom: 1px solid #2d3748;
+            position: sticky;
+            top: 0;
+        }
+        
+        .leaderboard td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #1e2a3a;
+        }
+        
+        .leaderboard tr:hover {
+            background: rgba(78, 205, 196, 0.05);
+        }
+        
+        .rank-badge {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .rank-1 { background: #ffd700; color: #1a1a2e; }
+        .rank-2 { background: #c0c0c0; color: #1a1a2e; }
+        .rank-3 { background: #cd7f32; color: #1a1a2e; }
+        .rank-other { background: #2d3748; color: #e6edf3; }
+        
+        .score {
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .person-detail {
+            background: #161b22;
+            border-radius: 12px;
+            border: 1px solid #2d3748;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .person-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2d3748;
+        }
+        
+        .person-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .person-rank {
+            font-size: 1rem;
+            color: #a0aec0;
+        }
+        
+        .person-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .person-stat {
+            text-align: center;
+            padding: 10px;
+            background: #1a2332;
+            border-radius: 8px;
+        }
+        
+        .person-stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .person-stat-label {
+            font-size: 0.8rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+        }
+        
+        .task-times {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #2d3748;
+        }
+        
+        .task-times h4 {
+            margin-bottom: 10px;
+            color: #4ecdc4;
+        }
+        
+        .task-time-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px dotted #2d3748;
+        }
+        
+        .team-card {
+            background: #161b22;
+            border-radius: 12px;
+            border: 1px solid #2d3748;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2d3748;
+        }
+        
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .team-members {
+            margin-top: 10px;
+            padding: 10px;
+            background: #1a2332;
+            border-radius: 8px;
+        }
+        
+        .team-member {
+            padding: 5px 0;
+            color: #a0aec0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .countdown-container {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #4ecdc4;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .countdown-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .countdown-item {
+            background: #0d1117;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            padding: 15px 25px;
+            min-width: 80px;
+        }
+        
+        .countdown-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .countdown-date {
+            font-size: 1rem;
+            color: #a0aec0;
+        }
+        
+        @media (max-width: 600px) {
+            .countdown-timer {
+                flex-wrap: wrap;
+            }
+            .countdown-item {
+                min-width: 60px;
+                padding: 10px 15px;
+            }
+            .countdown-value {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .team-search-container {
+            background: linear-gradient(135deg, #161b22 0%, #1a2332 100%);
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .team-search-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+        
+        .team-search-description {
+            color: #a0aec0;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .team-search-inputs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .team-handle-input {
+            width: 200px;
+            padding: 12px 20px;
+            border: 2px solid #2d3748;
+            border-radius: 8px;
+            background: #0d1117;
+            color: #e6edf3;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .team-handle-input:focus {
+            border-color: #4ecdc4;
+        }
+        
+        .team-search-btn {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b7aa 100%);
+            color: #0d1117;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .team-search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+        }
+        
+        .team-result-card {
+            background: #161b22;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .team-result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2d3748;
+        }
+        
+        .team-result-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .team-result-rank {
+            font-size: 1rem;
+            color: #a0aec0;
+        }
+        
+        .team-result-members {
+            margin-bottom: 15px;
+        }
+        
+        .team-result-members h4 {
+            color: #4ecdc4;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .team-member-item {
+            display: inline-block;
+            background: #1a2332;
+            padding: 5px 12px;
+            border-radius: 15px;
+            margin: 3px;
+            font-size: 0.9rem;
+            color: #e6edf3;
+        }
+        
+        .team-member-item.highlight {
+            background: #4ecdc4;
+            color: #0d1117;
+            font-weight: 600;
+        }
+        
+        .team-result-contests {
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+        
+        @media (max-width: 600px) {
+            .team-search-inputs {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-handle-input {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HKOI Contest Stats</h1>
+            <div class="subtitle">Hong Kong Olympiad in Informatics - Performance Analytics</div>
+            <div class="disclaimer">Note: Some scores may be parsed incorrectly from the original data</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="persons">Persons</div>
+            <div class="tab" data-tab="teams">Teams</div>
+            <div class="tab" data-tab="contests">Contests</div>
+            <div class="tab" data-tab="predictions">Predictions</div>
+        </div>
+        
+        <!-- Persons Tab -->
+        <div class="tab-content active" id="persons">
+            <div class="search-box">
+                <input type="text" id="person-search" placeholder="Search by handle or name...">
+            </div>
+            
+            <div class="stats-grid" id="person-overall-stats">
+                <!-- Filled by JS -->
+            </div>
+            
+            <div class="leaderboard" id="person-leaderboard">
+                <div class="leaderboard-header">Top Performers by Total Score</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Handle</th>
+                            <th>Contests</th>
+                            <th>Total Score</th>
+                            <th>Wins</th>
+                            <th>Top 3</th>
+                            <th>Best Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody id="person-table-body">
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Teams Tab -->
+        <div class="tab-content" id="teams">
+            <div class="team-search-container">
+                <div class="team-search-header">Search Teams by Handle</div>
+                <div class="team-search-description">Enter 1-3 handles to find all teams containing those members</div>
+                <div class="team-search-inputs">
+                    <input type="text" id="team-handle-1" placeholder="Handle 1 (required)" class="team-handle-input">
+                    <input type="text" id="team-handle-2" placeholder="Handle 2 (optional)" class="team-handle-input">
+                    <input type="text" id="team-handle-3" placeholder="Handle 3 (optional)" class="team-handle-input">
+                </div>
+                <button id="team-search-btn" class="team-search-btn" onclick="searchTeams()">Search Teams</button>
+            </div>
+            
+            <div id="team-search-results">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+        
+        <!-- Contests Tab -->
+        <div class="tab-content" id="contests">
+            <div class="leaderboard">
+                <div class="leaderboard-header">All Contests</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Duration</th>
+                            <th>Top 3</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contest-table-body">
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Predictions Tab -->
+        <div class="tab-content" id="predictions">
+            <div class="countdown-container">
+                <div class="countdown-header">TFT Day 1 Starts In</div>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="countdown-days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="countdown-hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="countdown-minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="countdown-seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+                <div class="countdown-date">May 23, 2026 at 1:00 PM</div>
+            </div>
+            
+            <div class="leaderboard">
+                <div class="leaderboard-header">TFT Predictions (Contest 480/481)</div>
+                <div style="padding: 15px; color: #f6e05e; font-size: 0.9rem; font-style: italic;">
+                    <p>This is a rough prediction based on historical performance and does not guarantee actual results.</p>
+                    <p style="color: #a0aec0; margin-top: 8px;">Using Bradley-Terry model with 2-contest average head-to-head comparisons.</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Username</th>
+                            <th>Skill</th>
+                            <th>H2H Win%</th>
+                            <th>1st%</th>
+                            <th>Top 4%</th>
+                            <th>Top 8%</th>
+                            <th>Contests</th>
+                        </tr>
+                    </thead>
+                    <tbody id="prediction-table-body">
+                        <!-- Filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Person Detail View -->
+        <div id="person-detail" style="display:none;">
+            <a href="#" class="back-link" onclick="hidePersonDetail(); return false;">← Back to List</a>
+            <div id="person-detail-content"></div>
+        </div>
+        
+        <!-- Team Detail View -->
+        <div id="team-detail" style="display:none;">
+            <a href="#" class="back-link" onclick="hideTeamDetail(); return false;">← Back to List</a>
+            <div id="team-detail-content"></div>
+        </div>
+    </div>
+    
+    <script>
+        let data = null;
+        
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                data = await response.json();
+                console.log('Data loaded:', data);
+                renderAll();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.querySelector('.container').innerHTML += '<p class="loading">Error loading data. Make sure data.json exists.</p>';
+            }
+        }
+        
+        function renderAll() {
+            renderPersonStats();
+            renderPersonLeaderboard();
+            renderContestList();
+            renderPredictions();
+        }
+        
+        // ==================== PERSONS ====================
+        
+        function renderPersonStats() {
+            const container = document.getElementById('person-overall-stats');
+            const persons = Object.entries(data.person_stats);
+            
+            const totalPersons = persons.length;
+            const totalContests = data.contests.length;
+            const totalWins = persons.reduce((sum, [_, ps]) => sum + ps.wins, 0);
+            const totalTop3 = persons.reduce((sum, [_, ps]) => sum + ps.top3, 0);
+            
+            container.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-value">${totalPersons}</div>
+                    <div class="stat-label">Unique Contestants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${totalContests}</div>
+                    <div class="stat-label">Contests</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${totalWins}</div>
+                    <div class="stat-label">Total Wins</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${totalTop3}</div>
+                    <div class="stat-label">Top 3 Finishes</div>
+                </div>
+            `;
+        }
+        
+        function renderPersonLeaderboard() {
+            const tbody = document.getElementById('person-table-body');
+            const persons = Object.entries(data.person_stats)
+                .filter(([handle, ps]) => ps.contest_count > 0)
+                .sort((a, b) => b[1].total_score - a[1].total_score);
+            
+            let html = '';
+            persons.forEach(([handle, ps], idx) => {
+                const bestRank = ps.best_rank || '-';
+                const rankClass = idx < 3 ? `rank-${idx+1}` : 'rank-other';
+                
+                html += `
+                    <tr onclick="showPersonDetail('${handle}')" style="cursor:pointer">
+                        <td><span class="rank-badge ${rankClass}">${idx+1}</span></td>
+                        <td><strong>${handle}</strong></td>
+                        <td>${ps.contest_count}</td>
+                        <td class="score">${ps.total_score.toFixed(2)}</td>
+                        <td>${ps.wins}</td>
+                        <td>${ps.top3}</td>
+                        <td>${bestRank}</td>
+                    </tr>
+                `;
+            });
+            
+            tbody.innerHTML = html;
+        }
+        
+        function showPersonDetail(handle) {
+            document.getElementById('persons').querySelector('.search-box').style.display = 'none';
+            document.getElementById('persons').querySelector('.stats-grid').style.display = 'none';
+            document.getElementById('person-leaderboard').style.display = 'none';
+            document.getElementById('person-detail').style.display = 'block';
+            
+            const ps = data.person_stats[handle];
+            if (!ps) return;
+            
+            // Find all individual rankings for this person across contests
+            const contestEntries = [];
+            data.contests.forEach(contest => {
+                const ranking = contest.rankings.find(r => r.handle === handle);
+                if (ranking) {
+                    contestEntries.push({
+                        contest: contest,
+                        ranking: ranking
+                    });
+                }
+            });
+            
+            // Find all team participations for this person
+            const teamEntries = [];
+            data.contests.forEach(contest => {
+                if (!contest.teams) return;
+                contest.teams.forEach(team => {
+                    if (team.members && team.members.some(m => m.startsWith(handle + ' -'))) {
+                        teamEntries.push({
+                            contest: contest,
+                            team: team
+                        });
+                    }
+                });
+            });
+            
+
+            
+            let detailHTML = `
+                <div class="person-detail">
+                    <div class="person-header">
+                        <div>
+                            <div class="person-name">${handle}</div>
+                            <div class="person-rank">${ps.contest_count} contests entered</div>
+                        </div>
+                    </div>
+                    
+                    <div class="person-stats">
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ps.total_score.toFixed(1)}</div>
+                            <div class="person-stat-label">Total Score</div>
+                        </div>
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ps.wins}</div>
+                            <div class="person-stat-label">Wins</div>
+                        </div>
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ps.top3}</div>
+                            <div class="person-stat-label">Top 3</div>
+                        </div>
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ps.best_rank || '-'}</div>
+                            <div class="person-stat-label">Best Rank</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sub-tabs">
+                    <div class="sub-tab active" data-subtab="individual" onclick="switchSubTab('individual')">Individual Contests</div>
+                    <div class="sub-tab" data-subtab="team" onclick="switchSubTab('team')">Team Contests</div>
+                </div>
+                
+                <div class="sub-tab-content active" id="subtab-individual">
+                    <div class="leaderboard">
+                        <div class="leaderboard-header">Individual Contest History</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Contest</th>
+                                    <th>Date</th>
+                                    <th>Rank</th>
+                                    <th>Total Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            `;
+            
+            contestEntries.sort((a, b) => {
+                const dateA = new Date(a.contest.date.split(' - ')[0]);
+                const dateB = new Date(b.contest.date.split(' - ')[0]);
+                return dateB - dateA;
+            });
+            
+            contestEntries.forEach(entry => {
+                const rank = entry.ranking.rank_normalized || entry.ranking.rank;
+                const rankClass = rank === 1 ? 'rank-1' : (rank === 2 ? 'rank-2' : (rank === 3 ? 'rank-3' : 'rank-other'));
+                
+                detailHTML += `
+                    <tr>
+                        <td><a href="${entry.contest.url}" class="card-link" target="_blank">${entry.contest.name}</a></td>
+                        <td class="contest-date">${entry.contest.date.split(' - ')[0]}</td>
+                        <td><span class="rank-badge ${rankClass}">${entry.ranking.rank}</span></td>
+                        <td class="score">${entry.ranking.total}</td>
+                    </tr>
+                `;
+            });
+            
+            detailHTML += `
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="sub-tab-content" id="subtab-team">
+                    <div class="leaderboard">
+                        <div class="leaderboard-header">Team Contest History</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Contest</th>
+                                    <th>Date</th>
+                                    <th>Team</th>
+                                    <th>Members</th>
+                                    <th>Rank</th>
+                                    <th>Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            `;
+            
+            teamEntries.sort((a, b) => {
+                const dateA = new Date(a.contest.date.split(' - ')[0]);
+                const dateB = new Date(b.contest.date.split(' - ')[0]);
+                return dateB - dateA;
+            });
+            
+            teamEntries.forEach(entry => {
+                const rank = entry.team.rank;
+                const rankClass = rank === 1 ? 'rank-1' : (rank === 2 ? 'rank-2' : (rank === 3 ? 'rank-3' : 'rank-other'));
+                const membersStr = entry.team.members ? entry.team.members.join(', ') : '-';
+                
+                detailHTML += `
+                    <tr>
+                        <td><a href="${entry.contest.url}" class="card-link" target="_blank">${entry.contest.name}</a></td>
+                        <td class="contest-date">${entry.contest.date.split(' - ')[0]}</td>
+                        <td class="team-name-cell">${entry.team.name}</td>
+                        <td class="team-name-cell">${membersStr}</td>
+                        <td><span class="rank-badge ${rankClass}">${rank || '-'}</span></td>
+                        <td class="score">${entry.team.total || '-'}</td>
+                    </tr>
+                `;
+            });
+            
+            detailHTML += `
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('person-detail-content').innerHTML = detailHTML;
+        }
+        
+        function switchSubTab(tabName) {
+            document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.sub-tab-content').forEach(c => c.classList.remove('active'));
+            
+            document.querySelector(`[data-subtab="${tabName}"]`).classList.add('active');
+            document.getElementById(`subtab-${tabName}`).classList.add('active');
+        }
+        
+        function hidePersonDetail() {
+            document.getElementById('persons').querySelector('.search-box').style.display = 'block';
+            document.getElementById('persons').querySelector('.stats-grid').style.display = 'grid';
+            document.getElementById('person-leaderboard').style.display = 'block';
+            document.getElementById('person-detail').style.display = 'none';
+        }
+        
+        // ==================== TEAMS ====================
+        
+        function showTeamDetail(teamName) {
+            document.getElementById('teams').querySelector('.search-box').style.display = 'none';
+            document.getElementById('teams').querySelector('.stats-grid').style.display = 'none';
+            document.getElementById('team-leaderboard').style.display = 'none';
+            document.getElementById('team-detail').style.display = 'block';
+            
+            const ts = data.team_stats[teamName];
+            if (!ts) return;
+            
+            // Find contests this team participated in
+            const contestEntries = [];
+            data.contests.forEach(contest => {
+                const teamData = (contest.teams || []).find(t => t.name === teamName);
+                if (teamData) {
+                    contestEntries.push({
+                        contest: contest,
+                        team: teamData
+                    });
+                }
+            });
+            
+            let detailHTML = `
+                <div class="team-card">
+                    <div class="team-header">
+                        <div>
+                            <div class="team-name">${teamName}</div>
+                            <div class="contest-info">${ts.contest_count} contests participated</div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-members">
+                        <h4 style="margin-bottom:10px; color:#4ecdc4;">Members</h4>
+            `;
+            
+            ts.members.forEach(member => {
+                detailHTML += `<div class="team-member">${member}</div>`;
+            });
+            
+            detailHTML += `
+                    </div>
+                    
+                    <div class="person-stats" style="margin-top:15px;">
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ts.wins}</div>
+                            <div class="person-stat-label">Wins</div>
+                        </div>
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ts.top3}</div>
+                            <div class="person-stat-label">Top 3</div>
+                        </div>
+                        <div class="person-stat">
+                            <div class="person-stat-value">${ts.best_rank || '-'}</div>
+                            <div class="person-stat-label">Best Rank</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leaderboard">
+                    <div class="leaderboard-header">Contest History</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Contest</th>
+                                <th>Date</th>
+                                <th>Rank</th>
+                                <th>Total Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            contestEntries.sort((a, b) => {
+                const dateA = new Date(a.contest.date.split(' - ')[0]);
+                const dateB = new Date(b.contest.date.split(' - ')[0]);
+                return dateB - dateA;
+            });
+            
+            contestEntries.forEach(entry => {
+                const rank = entry.team.rank || '-';
+                const rankClass = rank === 1 ? 'rank-1' : (rank === 2 ? 'rank-2' : (rank === 3 ? 'rank-3' : 'rank-other'));
+                
+                detailHTML += `
+                    <tr>
+                        <td><a href="${entry.contest.url}" class="card-link" target="_blank">${entry.contest.name}</a></td>
+                        <td class="contest-date">${entry.contest.date.split(' - ')[0]}</td>
+                        <td><span class="rank-badge ${rankClass}">${rank}</span></td>
+                        <td class="score">${entry.team.total || '-'}</td>
+                    </tr>
+                `;
+            });
+            
+            detailHTML += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            document.getElementById('team-detail-content').innerHTML = detailHTML;
+        }
+        
+        function hideTeamDetail() {
+            document.getElementById('teams').querySelector('.search-box').style.display = 'block';
+            document.getElementById('teams').querySelector('.stats-grid').style.display = 'grid';
+            document.getElementById('team-leaderboard').style.display = 'block';
+            document.getElementById('team-detail').style.display = 'none';
+        }
+        
+        // ==================== CONTESTS ====================
+        
+        function renderContestList() {
+            const tbody = document.getElementById('contest-table-body');
+            
+            const sortedContests = [...data.contests].sort((a, b) => {
+                const dateA = new Date(a.date.split(' - ')[0]);
+                const dateB = new Date(b.date.split(' - ')[0]);
+                return dateB - dateA;
+            });
+            
+            let html = '';
+            sortedContests.forEach(contest => {
+                const top3 = contest.rankings.slice(0, 3).map(r => {
+                    const rank = r.rank_normalized || r.rank;
+                    return `#${rank} ${r.handle}`;
+                }).join(', ');
+                
+                html += `
+                    <tr>
+                        <td>${contest.id}</td>
+                        <td><a href="${contest.url}" class="card-link" target="_blank">${contest.name}</a></td>
+                        <td class="contest-date">${contest.date.split(' - ')[0]}</td>
+                        <td>${contest.duration}</td>
+                        <td>${top3}</td>
+                        <td><a href="${contest.url}" class="card-link" target="_blank">View</a></td>
+                    </tr>
+                `;
+            });
+            
+            tbody.innerHTML = html;
+        }
+        
+        // ==================== COUNTDOWN ====================
+        
+        function updateCountdown() {
+            const targetDate = new Date('2026-05-23T13:00:00+08:00'); // May 23, 2026 at 1:00 PM HKT
+            const now = new Date();
+            const diff = targetDate - now;
+            
+            if (diff <= 0) {
+                document.getElementById('countdown-timer').innerHTML = '<div style="font-size: 2rem; color: #4ecdc4;">TFT Day 1 has started!</div>';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+            document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // ==================== TEAM SEARCH ====================
+        
+        function searchTeams() {
+            const handle1 = document.getElementById('team-handle-1').value.trim();
+            const handle2 = document.getElementById('team-handle-2').value.trim();
+            const handle3 = document.getElementById('team-handle-3').value.trim();
+            
+            if (!handle1) {
+                alert('Please enter at least one handle');
+                return;
+            }
+            
+            const searchHandles = [handle1, handle2, handle3].filter(h => h.length > 0);
+            const resultsContainer = document.getElementById('team-search-results');
+            
+            // Search through all teams
+            const matchingTeams = [];
+            
+            Object.entries(data.team_stats).forEach(([teamName, ts]) => {
+                // Extract handles from members
+                const memberHandles = ts.members.map(m => m.split(' - ')[0].trim());
+                
+                // Check if all search handles are in this team
+                const allFound = searchHandles.every(searchHandle => 
+                    memberHandles.some(memberHandle => 
+                        memberHandle.toLowerCase() === searchHandle.toLowerCase()
+                    )
+                );
+                
+                if (allFound) {
+                    matchingTeams.push({
+                        name: teamName,
+                        members: ts.members,
+                        memberHandles: memberHandles,
+                        contest_count: ts.contest_count,
+                        wins: ts.wins,
+                        top3: ts.top3,
+                        best_rank: ts.best_rank,
+                        contests: ts.contest_names
+                    });
+                }
+            });
+            
+            // Sort by best rank
+            matchingTeams.sort((a, b) => {
+                if (a.best_rank === null && b.best_rank === null) return 0;
+                if (a.best_rank === null) return 1;
+                if (b.best_rank === null) return -1;
+                return a.best_rank - b.best_rank;
+            });
+            
+            // Render results
+            let html = '';
+            
+            if (matchingTeams.length === 0) {
+                html = `
+                    <div class="team-result-card">
+                        <div style="text-align: center; color: #a0aec0; padding: 20px;">
+                            No teams found containing ${searchHandles.join(', ')}
+                        </div>
+                    </div>
+                `;
+            } else {
+                html += `
+                    <div style="margin-bottom: 20px; color: #a0aec0;">
+                        Found ${matchingTeams.length} team(s) containing ${searchHandles.join(', ')}
+                    </div>
+                `;
+                
+                matchingTeams.forEach(team => {
+                    const rankDisplay = team.best_rank ? `Best Rank: #${team.best_rank}` : 'No rank';
+                    
+                    let membersHtml = '';
+                    team.members.forEach(member => {
+                        const memberHandle = member.split(' - ')[0].trim();
+                        const isHighlighted = searchHandles.some(sh => 
+                            sh.toLowerCase() === memberHandle.toLowerCase()
+                        );
+                        membersHtml += `<span class="team-member-item ${isHighlighted ? 'highlight' : ''}">${member}</span>`;
+                    });
+                    
+                    // Create contest links
+                    let contestsHtml = '';
+                    if (team.contests && team.contests.length > 0) {
+                        contestsHtml = team.contests.map(contestName => {
+                            // Find contest ID by name
+                            const contest = data.contests.find(c => c.name === contestName);
+                            if (contest) {
+                                return `<a href="${contest.url}" class="card-link" target="_blank">${contestName}</a>`;
+                            }
+                            return contestName;
+                        }).join(', ');
+                    }
+                    
+                    html += `
+                        <div class="team-result-card">
+                            <div class="team-result-header">
+                                <div class="team-result-name">${team.name}</div>
+                                <div class="team-result-rank">${rankDisplay}</div>
+                            </div>
+                            <div class="team-result-members">
+                                <h4>Members</h4>
+                                ${membersHtml}
+                            </div>
+                            <div class="team-result-contests">
+                                <strong>${team.contest_count} contest(s)</strong> | ${team.wins} win(s) | ${team.top3} top 3 finish(es)
+                                ${contestsHtml ? '<br>Contests: ' + contestsHtml : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            resultsContainer.innerHTML = html;
+        }
+        
+        // ==================== PREDICTIONS ====================
+        
+        async function renderPredictions() {
+            try {
+                const response = await fetch('predictions_480.json');
+                const predData = await response.json();
+                const tbody = document.getElementById('prediction-table-body');
+                
+                let html = '';
+                predData.predictions.forEach((pred, idx) => {
+                    const rankClass = idx < 3 ? `rank-${idx+1}` : 'rank-other';
+                    const top1 = pred.top_1_prob ? (pred.top_1_prob * 100).toFixed(10) : '0.0000000000';
+                    const top4 = pred.top_4_prob ? (pred.top_4_prob * 100).toFixed(10) : '0.0000000000';
+                    const top8 = pred.top_8_prob ? (pred.top_8_prob * 100).toFixed(10) : '0.0000000000';
+                    const h2h = pred.h2h_win_rate ? pred.h2h_win_rate.toFixed(1) : '0.0';
+                    
+                    html += `
+                        <tr>
+                            <td><span class="rank-badge ${rankClass}">${pred.rank}</span></td>
+                            <td><strong>${pred.username}</strong></td>
+                            <td class="score">${pred.skill_score.toFixed(2)}</td>
+                            <td>${h2h}%</td>
+                            <td>${top1}%</td>
+                            <td>${top4}%</td>
+                            <td>${top8}%</td>
+                            <td>${pred.contests || '-'}</td>
+                        </tr>
+                    `;
+                });
+                
+                tbody.innerHTML = html;
+            } catch (error) {
+                console.error('Error loading predictions:', error);
+                document.getElementById('prediction-table-body').innerHTML = 
+                    '<tr><td colspan="8" style="text-align:center; color:#a0aec0;">Predictions not available. Run predictor.py first.</td></tr>';
+            }
+        }
+        
+        // ==================== SEARCH ====================
+        
+        function setupSearch() {
+            document.getElementById('person-search').addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const rows = document.querySelectorAll('#person-table-body tr');
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+            
+            // Add enter key support for team search
+            document.getElementById('team-handle-1').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') searchTeams();
+            });
+            document.getElementById('team-handle-2').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') searchTeams();
+            });
+            document.getElementById('team-handle-3').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') searchTeams();
+            });
+        }
+        
+        // ==================== TABS ====================
+        
+        function setupTabs() {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active from all tabs and contents
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Add active to clicked tab and corresponding content
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                    
+                    // Hide detail views when switching tabs
+                    document.getElementById('person-detail').style.display = 'none';
+                    document.getElementById('team-detail').style.display = 'none';
+                    
+                    // Show search boxes and stats
+                    document.getElementById('persons').querySelector('.search-box').style.display = 'block';
+                    document.getElementById('persons').querySelector('.stats-grid').style.display = 'grid';
+                    document.getElementById('person-leaderboard').style.display = 'block';
+                });
+            });
+        }
+        
+        // ==================== INIT ====================
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setupTabs();
+            setupSearch();
+            loadData();
+        });
+    </script>
+</body>
+</html>

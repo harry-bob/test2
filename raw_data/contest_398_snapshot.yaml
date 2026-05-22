@@ -1,0 +1,30 @@
+url: https://judge.hkoi.org/contest/398/results
+name: 2024 Training Camp / NOI
+date: 2024-06-29 09:30:00 - 2024-06-29 14:30:00
+duration: 5 h
+tasks:
+  - String Matching Task Pro Max
+  - Connecting the Lines
+  - Divisible Number
+  - Jumping Challenge
+rankings_top20:
+  - rank: 1, contestant: WongChun1234 - NO MORE IOI, m2441: "92", m2442: "84", m2443: "85", m2444: "70", total: "331"
+  - rank: 2, contestant: firewater - 1+1=2, m2441: "28", m2442: "100 / 3:50", m2443: "85", m2444: "40", total: "253"
+  - rank: 3, contestant: dbsculver0412 - grinding..., m2441: "36", m2442: "84", m2443: "90", m2444: "0", total: "210"
+  - rank: 4, contestant: s20192 - hopefuI, m2441: "52", m2442: "84", m2443: "55", m2444: "0", total: "191"
+  - rank: 5, contestant: s20251 - I think I did not 2con, m2441: "100 / 4:40", m2442: "84", m2443: "5", m2444: "0", total: "189"
+  - rank: 6, contestant: hywong1 - silksong!!!, m2441: "32", m2442: "56", m2443: "65", m2444: "30", total: "183"
+  - rank: 7, contestant: bedrockfake - jeekee, m2441: "100 / 0:56", m2442: null, m2443: "50", m2444: "30", total: "180"
+  - rank: 8, contestant: s19198 - bye, m2441: "40", m2442: "84", m2443: "55", m2444: null, total: "179"
+  - rank: 9, contestant: dbscarsonho - the wedding bells are chiming, m2441: "32", m2442: "84", m2443: "55", m2444: "0", total: "171"
+  - rank: 9, contestant: ywgs121 - ywgs121, m2441: "32", m2442: "84", m2443: "5", m2444: "50", total: "171"
+  - rank: 11, contestant: snowysecret - grim, m2441: "40", m2442: "72", m2443: "55", m2444: null, total: "167"
+  - rank: 12, contestant: happypotato - bruh open, m2441: "100 / 1:28", m2442: "56", m2443: "0", m2444: "0", total: "156"
+  - rank: 12, contestant: twg-210083 - Lo Ting Wai, m2441: "52", m2442: "84", m2443: "20", m2444: null, total: "156"
+  - rank: 14, contestant: yellowtoad - yellowtoad, m2441: "36", m2442: "56", m2443: "55", m2444: null, total: "147"
+  - rank: 15, contestant: __jk__ - in a game of up to six trials..., m2441: "40", m2442: "84", m2443: "5", m2444: "0", total: "129"
+  - rank: 16, contestant: shayeung - Angus_Yeung, m2441: "40", m2442: "40", m2443: "5", m2444: "40", total: "125"
+  - rank: 17, contestant: WYK22L19 - hope=0, m2441: "32", m2442: "76", m2443: "5", m2444: "0", total: "113"
+  - rank: 18, contestant: dbsjerryliuhkg - afo, m2441: "36", m2442: "56", m2443: "0", m2444: "20", total: "112"
+  - rank: 19, contestant: Left0807 - Left left OI (¬_¬ ), m2441: "44", m2442: "36", m2443: "30", m2444: "0", total: "110"
+  - rank: 20, contestant: dbslomien - 0.45897346510912, m2441: "44", m2442: null, m2443: "55", m2444: null, total: "99"
