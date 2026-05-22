@@ -1,0 +1,315 @@
+{
+  "contest": 480,
+  "predictions": [
+    {
+      "rank": 1,
+      "username": "WYK23F32",
+      "skill_score": 1.0591424562212677,
+      "h2h_win_rate": 83.18739054290718,
+      "top_1_prob": 0.63539,
+      "top_4_prob": 0.96453,
+      "top_8_prob": 0.99953,
+      "contests": 14
+    },
+    {
+      "rank": 2,
+      "username": "s20251",
+      "skill_score": 0.49561622903096725,
+      "h2h_win_rate": 61.711711711711715,
+      "top_1_prob": 0.12556,
+      "top_4_prob": 0.70537,
+      "top_8_prob": 0.98522,
+      "contests": 16
+    },
+    {
+      "rank": 3,
+      "username": "twg-210083",
+      "skill_score": 0.32415483552572155,
+      "h2h_win_rate": 64.0,
+      "top_1_prob": 0.07057,
+      "top_4_prob": 0.55646,
+      "top_8_prob": 0.96701,
+      "contests": 12
+    },
+    {
+      "rank": 4,
+      "username": "s20146",
+      "skill_score": 0.20608264623884087,
+      "h2h_win_rate": 59.380378657487086,
+      "top_1_prob": 0.07216,
+      "top_4_prob": 0.58357,
+      "top_8_prob": 0.95946,
+      "contests": 15
+    },
+    {
+      "rank": 5,
+      "username": "s20192",
+      "skill_score": 0.1877941973708555,
+      "h2h_win_rate": 57.96529968454258,
+      "top_1_prob": 0.059,
+      "top_4_prob": 0.5323,
+      "top_8_prob": 0.95497,
+      "contests": 26
+    },
+    {
+      "rank": 6,
+      "username": "dbsculver0412",
+      "skill_score": -0.12885786963019247,
+      "h2h_win_rate": 46.666666666666664,
+      "top_1_prob": 0.02654,
+      "top_4_prob": 0.38033,
+      "top_8_prob": 0.898,
+      "contests": 16
+    },
+    {
+      "rank": 7,
+      "username": "WYK22L19",
+      "skill_score": -0.5921655443260988,
+      "h2h_win_rate": 54.30711610486891,
+      "top_1_prob": 0.00815,
+      "top_4_prob": 0.14244,
+      "top_8_prob": 0.72785,
+      "contests": 15
+    },
+    {
+      "rank": 8,
+      "username": "rzhou",
+      "skill_score": -0.7452664858644775,
+      "h2h_win_rate": 90.56603773584906,
+      "top_1_prob": 0.00149,
+      "top_4_prob": 0.06811,
+      "top_8_prob": 0.50692,
+      "contests": 5
+    },
+    {
+      "rank": 9,
+      "username": "dbscarsonho",
+      "skill_score": -0.9248954337364943,
+      "h2h_win_rate": 36.45038167938932,
+      "top_1_prob": 0.00078,
+      "top_4_prob": 0.0429,
+      "top_8_prob": 0.41083,
+      "contests": 15
+    },
+    {
+      "rank": 10,
+      "username": "sms27098",
+      "skill_score": -1.0085112168028134,
+      "h2h_win_rate": 44.85294117647059,
+      "top_1_prob": 0.00022,
+      "top_4_prob": 0.01301,
+      "top_8_prob": 0.25597,
+      "contests": 16
+    },
+    {
+      "rank": 11,
+      "username": "wy_24215",
+      "skill_score": -1.1983898129271182,
+      "h2h_win_rate": 55.172413793103445,
+      "top_1_prob": 5e-05,
+      "top_4_prob": 0.00401,
+      "top_8_prob": 0.13874,
+      "contests": 11
+    },
+    {
+      "rank": 12,
+      "username": "dbsMarco",
+      "skill_score": -1.3763984867201176,
+      "h2h_win_rate": 45.81005586592179,
+      "top_1_prob": 7e-05,
+      "top_4_prob": 0.00609,
+      "top_8_prob": 0.14584,
+      "contests": 9
+    },
+    {
+      "rank": 13,
+      "username": "ccsc_fangzecheng",
+      "skill_score": -1.7148231778567389,
+      "h2h_win_rate": 52.38095238095239,
+      "top_1_prob": 2e-05,
+      "top_4_prob": 0.00088,
+      "top_8_prob": 0.04819,
+      "contests": 8
+    },
+    {
+      "rank": 14,
+      "username": "clcheung",
+      "skill_score": -2.4229699933905864,
+      "h2h_win_rate": 100.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.00135,
+      "contests": 3
+    },
+    {
+      "rank": 15,
+      "username": "s220039",
+      "skill_score": -2.6971744476072437,
+      "h2h_win_rate": 66.66666666666666,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0001,
+      "contests": 3
+    },
+    {
+      "rank": 16,
+      "username": "rsu",
+      "skill_score": -2.944321863975517,
+      "h2h_win_rate": 48.07692307692308,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 8
+    },
+    {
+      "rank": 17,
+      "username": "hkoi202425-14",
+      "skill_score": -3.2598174382718175,
+      "h2h_win_rate": 60.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 2e-05,
+      "contests": 3
+    },
+    {
+      "rank": 18,
+      "username": "dbscarychan",
+      "skill_score": -3.262084244594049,
+      "h2h_win_rate": 48.78048780487805,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 8
+    },
+    {
+      "rank": 19,
+      "username": "jltan",
+      "skill_score": -3.4697680774967052,
+      "h2h_win_rate": 33.33333333333333,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 4
+    },
+    {
+      "rank": 20,
+      "username": "dbsptl",
+      "skill_score": -3.6793235100176176,
+      "h2h_win_rate": 100.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    },
+    {
+      "rank": 21,
+      "username": "3lo",
+      "skill_score": -3.8400109976379393,
+      "h2h_win_rate": 80.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    },
+    {
+      "rank": 22,
+      "username": "sms27113",
+      "skill_score": -3.89660050979899,
+      "h2h_win_rate": 64.70588235294117,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 6
+    },
+    {
+      "rank": 23,
+      "username": "qc15701",
+      "skill_score": -4.137240369072056,
+      "h2h_win_rate": 83.33333333333334,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    },
+    {
+      "rank": 24,
+      "username": "WYK23F31",
+      "skill_score": -4.322873458766113,
+      "h2h_win_rate": 72.72727272727273,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 7
+    },
+    {
+      "rank": 25,
+      "username": "ywgs265",
+      "skill_score": -4.3393270554047225,
+      "h2h_win_rate": 100.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    },
+    {
+      "rank": 26,
+      "username": "cyjpang",
+      "skill_score": -4.73771234525385,
+      "h2h_win_rate": 47.82608695652174,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 6
+    },
+    {
+      "rank": 27,
+      "username": "dbsgc9987",
+      "skill_score": -4.768551968335907,
+      "h2h_win_rate": 60.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    },
+    {
+      "rank": 28,
+      "username": "s220082",
+      "skill_score": -4.844454308378053,
+      "h2h_win_rate": 100.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    },
+    {
+      "rank": 29,
+      "username": "twg-210110",
+      "skill_score": -4.9022885969208865,
+      "h2h_win_rate": 47.82608695652174,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 6
+    },
+    {
+      "rank": 30,
+      "username": "s202110288",
+      "skill_score": -5.1424539442788175,
+      "h2h_win_rate": 56.25,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 7
+    },
+    {
+      "rank": 31,
+      "username": "WYK22F22",
+      "skill_score": -5.176373968010205,
+      "h2h_win_rate": 100.0,
+      "top_1_prob": 0.0,
+      "top_4_prob": 0.0,
+      "top_8_prob": 0.0,
+      "contests": 3
+    }
+  ]
+}
